@@ -1,4 +1,4 @@
-# Python functions to compute pressure and density vertical modes
+# Python functions for computing pressure and density vertical modes
 #   and vertical structure of SQG solutions
 # Cesar B Rocha
 # SIO, Summer 2014
