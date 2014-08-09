@@ -16,7 +16,6 @@ def Dm(n):
     a = [1.,-1.]
     col1 = np.concatenate([a,b])
 
-    # Dn: 1st order centered differences
     D = sp.linalg.toeplitz(col1,row1)
 
     return D
