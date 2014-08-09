@@ -7,7 +7,7 @@ import numpy as np
 import scipy as sp
 
 def Dm(n):
-    """ creates forward difference matrix
+    """ it creates forward difference matrix
             n: number of rows/columns """
 
     a = [1.,0.]
@@ -23,7 +23,7 @@ def Dm(n):
 
 # four special matrices
 def kctb(n):
-    """ creates four 'special' matrices for
+    """ it creates four 'special' matrices for
             second order 1d problem.
             n: number of rows/columns """
 
@@ -47,7 +47,7 @@ def kctb(n):
 
 # orthonormal eigenvector
 def normal_evector(E,z):
-    """ normalize eigenvectors such that 
+    """ it normalizes eigenvectors such that 
            sum(Ei^2 x dz/H) = 1    """
     ix,jx =  E.shape
     dz = np.float(np.abs(z[1]-z[0]))
@@ -60,7 +60,7 @@ def normal_evector(E,z):
 # pressure N2 modes
 def pmodes(N2,z,lat,nm):
 
-    """ computes the pressure stratification (N2)
+    """ it computes the pressure stratification (N2)
        modes in a equispaced z-grid by solving
        d/dz( f2/N2(z) * d/dz ) F + rd^2 F = 0
        subject to dF/dz  = 0 @ z = 0, -H
@@ -100,7 +100,7 @@ def pmodes(N2,z,lat,nm):
 # density modes
 def rhomodes(N2,z,lat,nm):
 
-    """ computes the density stratification (N2)
+    """ it computes the density stratification (N2)
        modes in a equispaced grid z by solving
        d2/dz2 F + N2(z)/(g Dn) F = 0
        subject to F  = 0 @ z = 0, -H
@@ -137,7 +137,7 @@ def rhomodes(N2,z,lat,nm):
 # vertical structure of SQG solution 
 def sqgz(N2,z,lat,k):
 
-    """ computes vertical structure of SQG solutions
+    """ it computes vertical structure of SQG solutions
        in a regular grid z [m] by solving
        d/dz( f2/N2 * d/dz )F - k^2 F = 0
        subject to dF/dz  = 1 @ z = 0
